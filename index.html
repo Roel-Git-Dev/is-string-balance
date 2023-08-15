@@ -9,7 +9,7 @@
 <body>
 <div class="main-form">
     <h2 name="Box Main Title">Is String Balance?</h2>
-    <form action="/" method="GET" name="String Balance Checker Form">
+    <div name="String Balance Checker Form">
         <label class="form-label" for="String_To_Check">String to check</label><br/>
         <input type="text" id="String_To_Check" name="Input To Check" placeholder="Type your input here"><br/>
         <label class="form-label form-label-small-notes" >*This form only check for the following <br/>
@@ -17,11 +17,11 @@
         </label><br/>
         <button class="form-control-top-bottom-margin" id="btnClear">Clear</button>
         <button class="form-control-top-bottom-margin" id="btnCheck">Check</button>
-    </form>
+    </div>
 </div> 
-<div class="result-box">
+<div id="resultBox" class="result-box">
     <h2 name="Box Main Title">Result</h2>
 </div>
-<script src="index.js" type="javascript"></script>
+<script src="index.js"></script>
 </body>
 </html>
