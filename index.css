@@ -1,0 +1,98 @@
+:root {
+    --box-title-font-size: 2.9rem;
+    --form-control-common-height: 2.0rem;
+    --form-label-font-size: 2.0rem;
+    --form-label-min-font-size: 1.0rem;
+}
+
+
+div.upper-box, div.lower-box {
+    border: 1px solid black;
+    position: relative;
+    width: 100%;
+    height: 50%;
+
+}
+
+h2.box-title{
+    width: 100%;
+    height: fit-content;
+    font-size: var(--box-title-font-size);
+    text-align: center;
+}   
+
+#mainbox{
+    border: 1px solid black;
+    margin: 0% 25%;
+    width: 50vw;
+    height: 100vh;
+}
+
+#mainbox .upper-box > form {
+    position: relative;
+    margin: 0% 10%;
+    width: 80%;
+    height: fit-content;
+}
+
+#mainbox .upper-box > form * {
+    margin: 0.5rem 0%;
+    height: var(--form-control-common-height);
+}
+
+#mainbox .upper-box > form > label.form-label {
+    font-size: var(--form-label-font-size);
+}
+
+#mainbox .upper-box > form > label.form-label-min {
+    font-size: var(--form-label-min-font-size);
+}
+
+#inputToCheck {
+    position: relative;
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+#btnClear{
+    border: 1px solid grey;
+    border-radius: 16px;
+    width: 24.0%;
+    margin-left: 1% !important;
+    margin-right: 24.0% !important;
+    background-color: hsl(240, 100%, 40%);
+    color: white;
+    font-size: 1rem;
+}
+
+#btnClear:hover {
+    background-color: hsl(240, 100%, 70%);
+}
+
+
+#btnCheck{
+    border: 1px solid grey;
+    border-radius: 16px;
+    width: 24.0%;
+    margin-left: 24.0% !important;
+    margin-right: 1% !important;
+    background-color: hsl(240, 100%, 40%);
+    color: white;
+    font-size: 1rem;
+}
+
+#btnCheck:hover {
+    background-color: hsl(240, 100%, 70%);
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        margin: 0%;
+        width: 100vw;
+        height: 100vh;
+    }
+    #mainbox{
+        width: 100%;
+        height: 100%;
+    }
+}
