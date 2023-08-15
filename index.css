@@ -1,0 +1,56 @@
+form[name="String Balance Checker Form"] {
+    position: relative;
+    padding: 0% 10%;
+}
+
+.form-label {
+    font-size: 20px;
+}
+
+.form-label-small-notes {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form-control-top-bottom-margin {
+    margin: 5% 0%;
+}
+
+div.main-form {
+
+    border: 1px solid darkgrey;
+    margin: 0% 25%;
+    padding: 2% 10%;
+    max-width: 50%;
+}
+
+div.result-box {
+    border: 1px solid darkgrey;
+    margin: 0% 25%;
+    padding: 2% 10%;
+    max-width: 50%;
+}
+
+[name="Box Main Title"] {
+    position: relative;
+    height:fit-content;
+    text-align: center;
+    font-size: 42px;
+}
+
+form[name="String Balance Checker Form"] > input[name="Input To Check"]{
+    width: 100%;
+    font-size: 25px;
+}
+
+#btnClear {
+    width: 49%;
+    height: 40px;
+    font-weight: bolder;
+}
+
+#btnCheck {
+    width: 49%;
+    height: 40px;
+    font-weight: bolder;
+}
