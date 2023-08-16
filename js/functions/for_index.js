@@ -1,5 +1,5 @@
 import { Stack } from "../classes/Stack.js"
-import { Input_String_Characters_Validator } from "./utilities.js"
+import { Input_String_Characters_Validator, Element_AppendOnce } from "./utilities.js"
 
 
 const listofValidCharacters =  Array("(",")","[","]","<",">","{","}")
@@ -14,7 +14,7 @@ function Is_String_Balance(given_string)
     const is_valid_input = Input_String_Characters_Validator(given_string,listofValidCharacters)
     if(is_valid_input.hasOwnProperty("error") && is_valid_input.error === "InvalidCharactersUseError")
     {
-        alert("Error: An invalid character(s) was used")
+        alert("Error: Invalid character(s) was used")
         return
     }
     if(is_valid_input.hasOwnProperty("error") && is_valid_input.error === "UnusableStringLengthError")
@@ -23,24 +23,44 @@ function Is_String_Balance(given_string)
         return
     }
     
+    const stack_count =  Return_Stack_Count(given_string)
+    let myResult = Element_AppendOnce("div","#mainbox > .lower-box","myResult")
+
+    if(stack_count > 0)
+    {   
+        myResult.className="result-false"
+        myResult.innerText = `This ${given_string} is not balance`
+    }
+    else
+    {
+        myResult.className="result-true"
+        myResult.innerText = `This ${given_string} is balance`
+    }
 }
 
-function Return_Stack_Length(given_string)
+function Return_Stack_Count(given_string)
 {
-    const myStack  = new Stack()
+    let myStack  = new Stack()
     for (let current_char of given_string)
     {
-        if(myStack.Count() > 0)
+        if(myStack.Count() <=  0)
         {
-            if(`${myStack.Peek()}${current_char}` ===  "()" ||
-            `${myStack.Peek()}${current_char}` ===  "[]" || 
-            `${myStack.Peek()}${current_char}` ===  "<>" ||
-            `${myStack.Peek()}${current_char}` ===  "{}"
-            )
-            myStack.Pop()
+            myStack.Push(current_char)
             continue
         }
-    myStack.Push(current_char)
+
+        if(`${myStack.Peek()}${current_char}` ===  "()" || `${myStack.Peek()}${current_char}` ===  "[]" || 
+            `${myStack.Peek()}${current_char}` ===  "<>" || `${myStack.Peek()}${current_char}` ===  "{}" ){
+           
+            myStack.Pop()
+            continue
+          }
+          else
+          {
+            myStack.Push(current_char)
+            continue
+          }
+
     }
 
     return myStack.Count()
