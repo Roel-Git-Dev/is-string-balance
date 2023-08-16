@@ -1,3 +1,4 @@
+//Description: This file contains a simple implementation of Stack Data Structure.
 export class Stack  {
      #_previous_pointer = -1
      #_current_pointer = 0
