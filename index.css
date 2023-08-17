@@ -20,11 +20,11 @@
 }
 
 div.lower-box > div.result-left-circle {
-    left: 16%;
+    left: 20%;
 }
 
 div.lower-box > div.result-right-circle {
-    left: 16%;
+    left: 20%;
 }
 
 div.upper-box, div.lower-box {
@@ -45,7 +45,7 @@ h2.box-title{
 div.lower-box > h2.box-title {
     position: relative;
     display: inline-block;
-    left: 16%;
+    left: 20%;
     margin-left: 0%;
     margin-right: 0%;
     width: 50%;
